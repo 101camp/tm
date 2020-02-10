@@ -2,8 +2,10 @@ site_name: 蟒营™时间管理(0TM)原型班
 copyright: 蟒营™101camp
 
 theme:
-    name: null
-    custom_dir: mkdocs_alabaster
+  name: null
+  custom_dir: mkdocs_alabaster
+  logo: https://blog.101.camp/logo-lazy-monkey-h420.png
+  logo_title: lazy-monkey
 
 nav:
   - Home: index.md
@@ -22,9 +24,18 @@ markdown_extensions:
   - toc:
       permalink: "¶"
 
+intra:
+  col0_title: 综述
+  col0_link2: /1overview/
+  col1_title: 数据
+  col1_link2: /2record/
+  col2_title: 成果
+  col2_link2: /3work/
+  col3_title: 经验
+  col3_link2: /4experience/
+
+
 extra:
-  logo: https://blog.101.camp/logo-lazy-monkey-h420.png
-  logo_title: lazy-monkey
   include_toc: yes
   extra_nav_links:
     edit➔GitHub: https://github.com/101camp/tm
