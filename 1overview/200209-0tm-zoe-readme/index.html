@@ -5,7 +5,7 @@
   
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <title>问答汇总 &mdash; 蟒营™时间管理(0TM)原型班</title>
+    <title>TM 时间账单服务 &mdash; 蟒营™时间管理(0TM)原型班</title>
 
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <link rel="stylesheet" href="../../css/alabaster.css" type="text/css">
@@ -48,91 +48,83 @@ var _hmt = _hmt || [];
       <div class="bodywrapper">
         <div class="body" role="main">
           
-            <h1 id="_1">问答汇总<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<h2 id="_2">关于活动设置<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>mxclover: 大妈，这里的5个行为是指 5个大类吧（下面可以加一些子类吗？比如 livin 里面 加 洗漱，吃饭等）？ 还是就这5个最简单的行为？ </p>
-</blockquote>
-<p>action 就是行为不是类别了…
-因为统计时, 将只针对这几个行为属性, 而不细分具体行为;
-所以, 追加了细节,对统计并无影响, 但是, 影响使用时的识别…
-所以, 先用最简 action 养成习惯, 慢慢建立记录/分析/优化的循环后,
-根据自己的特点继续增加</p>
-<h2 id="_3">关于活动切换<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+            <h1 id="tm">TM 时间账单服务<a class="headerlink" href="#tm" title="Permanent link">¶</a></h1>
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <ul>
-<li>这种极简时帐形式, 是俺多年摸索而成,只有将行为属性和内容分离, 才能形成习惯, 因为:<ul>
-<li>只在行为属性切换时触发记录</li>
-<li>每个行为之间没有切换成本</li>
-<li>每个行为本身也没有记录/修改成本</li>
-<li>每个行为开始前的属性判定也越来越习惯</li>
+<li>最早的时帐任务:<ul>
+<li><a href="https://github.com/DebugUself/du4proto/issues/2">28d[TASK]时间账单任务 (原 S01E01 任务 -&gt; S01E01.2)</a></li>
+<li><a href="https://github.com/DebugUself/du4proto/issues/3">[ASK] 有靠谱的时间记录工具否?</a></li>
 </ul>
 </li>
-<li>刚刚开始时是有私人习惯的担心<ul>
-<li>但是, 真正开始记要就能发现</li>
-<li>没有任何内容相关信息时,除了效能习惯, 其它私人习惯都看不出来的</li>
+<li>原本是想先通过手工时帐体验, 引发工具探索</li>
+<li>进而形成共同的工具以及规约</li>
+<li>没想到太过艰难, 无人坚持</li>
 </ul>
-</li>
-<li>另外,另外前并行记录...<ul>
-<li>时帐最要紧的不是属性行为的每日总时长</li>
-<li>而是属性行为的自然时间序列关系</li>
-<li>比如, 一样的每天平均睡7小时<ul>
-<li>但是, 一次睡足7小时</li>
-<li>和每2小时, 睡40分钟</li>
-<li>是绝对不同的</li>
-</ul>
-</li>
-<li>所以, 千万别:<ul>
-<li>使用暂停</li>
-<li>使用多任务计时</li>
-</ul>
-</li>
-<li>因为, 这对客观用时亳无意义<ul>
-<li>同时, 毎个人同时不可能作两种属性的事儿</li>
-<li>比如, 写代码<ul>
-<li>此时搜索/查阅本身也是为输出服务的</li>
-<li>嘦此时行为主要精力投入在输出</li>
-<li>那么, 时间属性就是输出</li>
-</ul>
-</li>
-<li>除非, 你自己明确的知道, 当前的搜索是纯粹输入, 不会产生任何有价值的输出</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>毕竟:<ul>
-<li>每天24小时, 是对所有人最基础的公平</li>
-<li>如果你的记录, 统计起来这天用了42小时, 那么你的效率就是高嘛?</li>
-</ul>
-</li>
-<li>所以, <ul>
-<li>极简活动定义</li>
-<li>每次只触发一个活动<ul>
-<li>每次触发自动关闭之前一个活动</li>
-<li>永远记录当前一个活动用时</li>
-</ul>
-</li>
-<li>尽可能每天追踪满24小时</li>
-</ul>
-</li>
-<li>只有这样, 才能形成一个统一的简洁的可分析的数据基础</li>
-</ul>
-<h2 id="_4">关于备注<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
-<p>是也乎,(￣▽￣)</p>
-<p>就是不写任何备注, 因为:</p>
+<h2 id="_2">目的<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>通过100天时帐记录和3次分析反馈</p>
 <ul>
-<li>备注毫无意义</li>
-<li>备注本身占用的时间无法统计</li>
-<li>备注增加心智负荷</li>
-<li>时帐首先是形成习惯, 包含所有行为属性, 但是, 不用包含所有行为内容和感触</li>
-<li>要想针对阶段行为进行反思, 那是日记/周报/blogging 等等, 正式输出的行为</li>
-<li>时帐先完全单纯化, 再配合其它工具, 或是习惯完成精细记要</li>
+<li>建立私人时帐习惯</li>
+<li>熟悉怼圈 trao 工具</li>
+<li>完成时帐记录-&gt;反馈-&gt;持续优化 循环</li>
+<li>形成通过时间帐单持续优化私人效能案例<ul>
+<li>为明年发布自怼时间管理课程作准备</li>
 </ul>
-<p>所以, 理解和行动在时帐中, 也是分离的, 先形成可以持续优化的习惯,
-再理解, 这一习惯带来的好处和问题...</p>
-<p>就象我们使用的汉语, 如果没先习惯使用, 就想理解汉语对我们世界观的影响是不可能的...</p>
+</li>
+</ul>
+<h2 id="_3">准备工作<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h3 id="_4">征召志愿者<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>5位: @zoejane/ @bemself/ @linfeng365/ @mxclover/ @orderchaos3000 </p>
+<h3 id="_5">创建专用列表<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p>101camp0tm@googlegroups.com</p>
+<h3 id="_6">形成可用习惯<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<p>统一配置</p>
+<ul>
+<li>安装 aTimeLogger </li>
+<li>最简 action:<ul>
+<li>output</li>
+<li>input</li>
+<li>livin</li>
+<li>sleep</li>
+<li>chaos</li>
+</ul>
+</li>
+<li>格式配置:<ul>
+<li>日期格式 -&gt; <code>28/12</code></li>
+<li>持续时间格式-&gt; <code>01:23</code></li>
+</ul>
+</li>
+<li>活动配置:<ul>
+<li>开始新活动时 -&gt; 结束</li>
+<li>开始新活动时备注 -&gt; 关闭</li>
+<li>结束新活动时备注 -&gt; 关闭</li>
+<li>最小活动持续时间 -&gt; 分钟</li>
+</ul>
+</li>
+<li>报告配置:</li>
+</ul>
+<p><img alt="" src="https://user-images.githubusercontent.com/22494/71803163-fb73f980-309a-11ea-981c-5d602d734d9b.jpeg" /></p>
+<p><img alt="" src="https://user-images.githubusercontent.com/22494/71803191-0f1f6000-309b-11ea-8094-cff400fc39e8.jpeg" /></p>
+<h2 id="_7">校调记录习惯<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
+<p>参考操作视频-&gt;<a href="http://101.zoomquiet.top/res/0tm/index.html">Index of /res/0tm {gen. by gen4idx.py v13.4.18 from Zoom.Quiet}</a></p>
+<h2 id="_8">检验记录数据<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
+<p>通过邮件列表  101camp0tm@googlegroups.com 进行</p>
+<h2 id="_9">方案<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
+<h3 id="_10">定期收集数据<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<ul>
+<li>[ ] 200201 首月数据 .csv</li>
+<li>[ ] 200301 次月数据 .csv</li>
+<li>[ ] 200401 末月数据 .csv</li>
+</ul>
+<h3 id="_11">内部公开分析<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<ul>
+<li>[ ] 200208 直播分析</li>
+<li>[ ] 200308 直播分析</li>
+<li>[ ] 200408 直播分析</li>
+</ul>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h2>
 <ul>
-<li>20200206 zoejane init</li>
+<li>20200206 zoejane merge issues</li>
+<li>20191228 ZQ init.</li>
 </ul>
             
 <!--
@@ -247,7 +239,15 @@ var _hmt = _hmt || [];
         
           
             
-  <h1 class="logo"><a href="../..">蟒营™时间管理(0TM)原型班</a></h1>
+  <p class="logo">
+    <a href="../..">
+      <!--
+      <img class="logo" src="../../https://blog.101.camp/logo-lazy-monkey-h420.png" title="lazy-monkey">
+    -->
+      <img class="logo" src="https://blog.101.camp/logo-lazy-monkey-h420.png" title="lazy-monkey">
+    </a>
+  </p>
+  
 
 
 
@@ -263,18 +263,58 @@ var _hmt = _hmt || [];
   
     <ul>
     
-      <li><a href="#_2">关于活动设置</a></li>
+      <li><a href="#_1">背景</a></li>
       <ul>
     
   </ul>
     
-      <li><a href="#_3">关于活动切换</a></li>
+      <li><a href="#_2">目的</a></li>
       <ul>
     
   </ul>
     
-      <li><a href="#_4">关于备注</a></li>
+      <li><a href="#_3">准备工作</a></li>
       <ul>
+    
+      <li><a href="#_4">征召志愿者</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#_5">创建专用列表</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#_6">形成可用习惯</a></li>
+      <ul>
+    
+  </ul>
+    
+  </ul>
+    
+      <li><a href="#_7">校调记录习惯</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#_8">检验记录数据</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#_9">方案</a></li>
+      <ul>
+    
+      <li><a href="#_10">定期收集数据</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#_11">内部公开分析</a></li>
+      <ul>
+    
+  </ul>
     
   </ul>
     
@@ -293,7 +333,7 @@ var _hmt = _hmt || [];
       <!--
         <li class="toctree-l1"><a href="https://github.com/101camp/tm">edit➔GitHub</a></li>
       -->
-        <li class="toctree-l1"><a href="https://github.com/101camp/blog/tree/master/docs/1overview/qa.md">edit➔GitHub</a></li>
+        <li class="toctree-l1"><a href="https://github.com/101camp/blog/tree/master/docs/1overview/200209-0tm-zoe-readme.md">edit➔GitHub</a></li>
 
       
     </ul>
@@ -413,7 +453,7 @@ var _hmt = _hmt || [];
 
   <!--
   MkDocs version      : 1.0.4
-  Docs Build Date UTC : 2020-02-10 13:06:26
+  Docs Build Date UTC : 2020-02-10 13:27:19
   -->
 </body>
 </html>
