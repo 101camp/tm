@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>User guide &mdash; 蟒营™时间管理(0TM)原型班</title>
+
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link rel="stylesheet" href="../../css/alabaster.css" type="text/css">
+    <link rel="stylesheet" href="../../css/alabaster-overrides.css" type="text/css">
+
+    
+
+    
+      <script src="../../search/main.js"></script>
+    
+
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+    
+  
+
+
+<!--
+190916 ++tongji.baidu
+-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7b96768fb6a5e86ac53eae70bb5fd60b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body>
+
+  <div class="document">
+    <div class="documentwrapper">
+      <div class="bodywrapper">
+        <div class="body" role="main">
+          
+            <h1 id="user-guide">User guide<a class="headerlink" href="#user-guide" title="Permanent link">¶</a></h1>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
+<p>First, install the <code>mkdocs-alabaster</code> package from PyPI:</p>
+<pre><code>$ pip install mkdocs-alabaster
+</code></pre>
+
+<p>(If you used <a href="https://github.com/mitsuhiko/pipsi"><code>pipsi</code></a> to install MkDocs, you should install the theme into that virtualenv as well:)</p>
+<pre><code>$ ~/.local/venvs/mkdocs/bin/pip install mkdocs-alabaster
+</code></pre>
+
+<p>Then enable the <code>alabaster</code> theme in your <code>mkdocs.yml</code>:</p>
+<pre><code>theme: alabaster
+</code></pre>
+
+<p>That's it! You now have the standard Alabaster theme set up. Read on for more configuration options/concerns.</p>
+<h3 id="permalinks">Permalinks<a class="headerlink" href="#permalinks" title="Permanent link">¶</a></h3>
+<p>Set <code>markdown_extensions.toc.permalink</code> to <code>"¶"</code> to add permalinks to the headers (visible on hover). “¶” is the default symbol used by Sphinx, you can use something else if you want.</p>
+<h3 id="theme-options">Theme options<a class="headerlink" href="#theme-options" title="Permanent link">¶</a></h3>
+<h4 id="extralogo"><code>extra.logo</code><a class="headerlink" href="#extralogo" title="Permanent link">¶</a></h4>
+<p>Relative path (from <code>$PROJECT/docs/</code>) to a logo image, which will appear in the upper left corner above the name of the project.</p>
+<blockquote>
+<p>If logo is not set, your project name setting (from the MkDocs config) will be used in a text header instead. This preserves a link back to your homepage from inner doc pages.</p>
+</blockquote>
+<h4 id="extralogo_name"><code>extra.logo_name</code><a class="headerlink" href="#extralogo_name" title="Permanent link">¶</a></h4>
+<p>Set to <code>true</code> to insert your site's <code>project</code> name under the logo image as text. Useful if your logo doesn't include the project name itself. Defaults to <code>false</code>.</p>
+<h4 id="extralogo_title"><code>extra.logo_title</code><a class="headerlink" href="#extralogo_title" title="Permanent link">¶</a></h4>
+<p>Logo's title attribute. Default: your <code>site_name</code>.</p>
+<h4 id="extrainclude_toc"><code>extra.include_toc</code><a class="headerlink" href="#extrainclude_toc" title="Permanent link">¶</a></h4>
+<p>Boolean, whether to include TOC in sidebar navigation or not. Default: false.</p>
+<h4 id="extraextra_nav_links"><code>extra.extra_nav_links</code><a class="headerlink" href="#extraextra_nav_links" title="Permanent link">¶</a></h4>
+<p>A dict of navigation links. Example:</p>
+<pre><code class="yaml">extra:
+  extra_nav_links:
+    Fork me on GitHub: https://github.com/iamale/rock-cli
+</code></pre>
+
+<h4 id="extrashow_powered_by"><code>extra.show_powered_by</code><a class="headerlink" href="#extrashow_powered_by" title="Permanent link">¶</a></h4>
+<p>Show “Powered by” message, mentioning MkDocs and this theme. Default: true.</p>
+<h4 id="extrasidebars"><code>extra.sidebars</code><a class="headerlink" href="#extrasidebars" title="Permanent link">¶</a></h4>
+<p>Specify sidebars shown in the left menu. By default, the following ones are
+shown, top to bottom:</p>
+<ul>
+<li><code>about</code>: logo and title (<code>sidebars/about.html</code>)</li>
+<li><code>toc</code>: current page table of contents (<code>sidebars/toc.html</code>)</li>
+<li><code>related</code>: links to the previous and next pages (<code>sidebars/related.html</code>)</li>
+<li><code>search</code>: quick search (<code>sidebars/search.html</code>)</li>
+</ul>
+<p>To add your own sidebar, put its template in <code>$THEME_DIR/sidebars</code> and add its
+name to <code>extra.sidebars</code>:</p>
+<pre><code class="yaml">extra:
+  sidebars:
+    - about
+    - toc
+    - my-awesome-sidebar # corresponds to `$THEME_DIR/sidebars/my-awesome-sidebar.html`
+    - related
+    - search
+</code></pre>
+
+<h4 id="extrahomepage_nav"><code>extra.homepage_nav</code><a class="headerlink" href="#extrahomepage_nav" title="Permanent link">¶</a></h4>
+<p>Show navigation tree on homepage. Default: true.</p>
+<h4 id="extrahomepage_sidebars"><code>extra.homepage_sidebars</code><a class="headerlink" href="#extrahomepage_sidebars" title="Permanent link">¶</a></h4>
+<p>List of sidebar names shown in the left menu <em>on the homepage only</em>.
+By default, the following sidebars are shown, top to bottom:</p>
+<ul>
+<li><code>about</code>: logo and title (<code>sidebars/about.html</code>)</li>
+<li><code>search</code>: quick search (<code>sidebars/search.html</code>)</li>
+</ul>
+<p>As you see, homepage is a little special as it doesn't have <code>toc</code> and <code>related</code>
+sidebars by default. The option <code>extra.homepage_sidebars</code> lets you easily
+override this behavior:</p>
+<pre><code class="yaml">extra:
+  homepage_sidebars:
+    - about
+    - toc
+    - related
+    - search
+</code></pre>
+
+<h3 id="navigation-sidebar">Navigation sidebar<a class="headerlink" href="#navigation-sidebar" title="Permanent link">¶</a></h3>
+<p>The table of contents sidebar includes only the current page's headings. If you
+want to have the global navigation in the menu, use an alternative sidebar
+called <code>navigation</code>:</p>
+<pre><code class="yaml">extra:
+  sidebars:
+    - about
+    - navigation
+    - related
+    - search
+</code></pre>
+
+<p>This is a port of the original Alabaster theme's sidebar of the same name.</p>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h3>
+<pre><code class="yaml">site_name: rock-cli
+theme: alabaster
+copyright: 2016 Alexander Pushkov
+
+markdown_extensions:
+  - toc:
+      permalink: &quot;¶&quot;
+
+extra:
+  logo: logo.png
+  logo_title: &quot;Rocketbank logo&quot;
+  include_toc: yes
+  extra_nav_links:
+    Fork me on GitHub: https://github.com/iamale/rock-cli
+</code></pre>
+            
+<!--
+            
+
+-->
+
+            <!--190910 init. comments-->
+<hr/>
+            <script src="https://utteranc.es/client.js"
+        repo="101camp/comments"
+        issue-term="url"
+        label="✨💬✨ "
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<hr/>
+
+            <hr/>
+
+<h3>精品小班5Py 初十上线</h3>
+<blockquote><p>
+    
+<ul>
+    <li>
+    开始报名: <b>2020.2.3</b>
+    </li>
+    <li>
+    报名结束: <b>2020.2.24</b>
+    </li>
+    <li>
+    正式开课: <b>2020.3.2</b>
+    </li>
+    <li>
+    课程结束: <b>2020.4.12</b>
+    </li>
+</ul>
+
+<img alt="101camp5py" src="http://ydlj.zoomquiet.top/ipic/2020-02-02-200202RQ5py_only.jpg"/>
+
+</p></blockquote>
+
+
+<hr/>
+
+<h2>蟒营</h2>
+<p>
+    伴你重享<b>学习</b>乐趣
+</p>
+<blockquote>
+<p>
+    <b>
+    101.camp
+    </b>
+</p>
+<p>
+    <i>
+    Reactivate Joy by Self-teach <b>with You</b>
+    </i>
+</p>
+</blockquote>
+
+
+<br/>
+任何问题可先进入知识星球<b>(免费)</b>咨询:
+<br/>
+<img alt="FAQ" 
+    src="https://ipic.zoomquiet.top/2019-08-28-FAQ101camp.jpeg"/>
+
+
+<p>关注公众号, 持续获得相关各种咨询, :
+<img alt="mainium" src="https://ipic.zoomquiet.top/2019-10-12-mainium-qr-barnner.jpg"/>
+
+<!--
+<img alt="PythoniCamp" src="http://0.zoomquiet.top/logos/101.camp/banner_101camp_h191.jpg"/>
+
+    <br/>
+实在想立即开始感受蟒营, 可以加入知识星球(免费):
+    <br/>
+
+<img alt="蟒营101camp" src="https://ipic.zoomquiet.top/2019-08-09-190809camp101.jpeg"/>
+
+-->
+</p>
+
+<hr/>
+
+<h3>追问</h3>
+<blockquote>
+<p>
+    任何问题, 随时邮件提问可也:
+<br/>
+    <i>
+    ask@101.camp
+    </i>
+</p>
+</blockquote>
+
+<hr/>
+
+
+
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebarwrapper">
+        
+          
+            
+  <p class="logo">
+    <a href="../..">
+      <img class="logo" src="../../https://blog.101.camp/logo-lazy-monkey-h420.png" title="蟒营™时间管理(0TM)原型班">
+    </a>
+  </p>
+  
+
+
+
+          
+            
+
+
+
+<h3>Table Of Contents</h3>
+
+<nav>
+  
+  
+    <ul>
+    
+      <li><a href="#installation">Installation</a></li>
+      <ul>
+    
+      <li><a href="#permalinks">Permalinks</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#theme-options">Theme options</a></li>
+      <ul>
+    
+      <li><a href="#extralogo">extra.logo</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#extralogo_name">extra.logo_name</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#extralogo_title">extra.logo_title</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#extrainclude_toc">extra.include_toc</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#extraextra_nav_links">extra.extra_nav_links</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#extrashow_powered_by">extra.show_powered_by</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#extrasidebars">extra.sidebars</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#extrahomepage_nav">extra.homepage_nav</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#extrahomepage_sidebars">extra.homepage_sidebars</a></li>
+      <ul>
+    
+  </ul>
+    
+  </ul>
+    
+      <li><a href="#navigation-sidebar">Navigation sidebar</a></li>
+      <ul>
+    
+  </ul>
+    
+      <li><a href="#example">Example</a></li>
+      <ul>
+    
+  </ul>
+    
+  </ul>
+    
+  </ul>
+  
+
+  
+    <hr>
+    <ul>
+      
+      <!--
+        <li class="toctree-l1"><a href="https://github.com/101camp/tm">edit➔GitHub</a></li>
+      -->
+        <li class="toctree-l1"><a href="https://github.com/101camp/blog/tree/master/docs/alabaster/guide.md">edit➔GitHub</a></li>
+
+      
+    </ul>
+  
+</nav>
+          
+            
+
+          
+            <!--
+<div id="searchbox" style="display: none;" role="search">
+  <h3>Quick search</h3>
+  <form class="search" action="../../search.html" method="get">
+    <input name="q" type="text">
+    <input value="Go" type="submit">
+  </form>
+  <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+  </p>
+</div>
+<script type="text/javascript">
+  document.getElementById("searchbox").style.display = "block";
+</script>
+
+-->
+          
+        
+
+        <!--190910 init. comments-->
+        <h3>Columns</h3>
+<ul>
+    <li><a href="/DM/">DM 大妈嗯哼</a></li>
+    <li><a href="/NC/">NC 嗯哼蟒营</a></li>
+    <li><a href="/SS/">SS 学员故事</a></li>
+    <li><a href="/TS/">TS 技术鳮汤</a></li>
+</ul>
+
+
+
+<h4>Powered by</h4>
+<ul>
+    <li>
+        <a href="https://101.camp/">蟒营™</a>
+<ul>
+    <li>
+        <a href="https://py.101.camp/">Python 入门班</a>
+    </li>
+    <li>
+        <a href="https://io.101.camp/">图谱</a>
+    </li>
+    <li>
+        <a href="https://slides.101.camp/">幻灯</a>
+    </li>
+    <li>
+        <a href="https://wiki.101.camp/">维基</a>
+    </li>
+    <li>
+        <a href="https://github.com/101camp/comments/issues">评注</a>
+    </li>
+</ul>
+    </li>
+
+    <li>
+        <a href="https://du.101.camp/">自怼圈</a>
+    </li>
+    <li>
+        <a href="http://weekly.pychina.org/">蟒周刊</a>
+    </li>
+    <li>
+        <a href="https://blog.zhgdg.org/">珠海GDG</a>
+    </li>
+    <li>
+        "大妈"们
+<ul>
+    <li>
+        <a href="https://yixuan.li/">Yixuan</a>
+    </li>
+
+    <li>
+        <a href="https://www.douban.com/people/Azeril/">Azeril</a>
+    </li>
+    <li>
+        <a href="https://zoomquiet.io/">Zoom.Quiet</a>
+    </li>
+    <li>
+        ...
+    </li>
+</ul>
+    <li>
+        <a href="http://mainium.icu">昧因科技®</a>
+    </li>
+    </li>
+</ul>
+
+      </div>
+    </div>
+    <div class="clearer"></div>
+  </div>
+
+  
+    <div class="footer">
+      
+        &copy; 蟒营™101camp
+      
+      
+        |
+        Powered by <a href="http://www.mkdocs.org">mkdocs 1.0.4</a>
+        &amp; <a href="https://github.com/iamale/mkdocs-alabaster">mkdocs-alabaster</a>
+      
+    </div>
+  
+
+  <!--
+  MkDocs version      : 1.0.4
+  Docs Build Date UTC : 2020-02-10 12:26:45
+  -->
+</body>
+</html>
