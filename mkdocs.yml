@@ -1,0 +1,29 @@
+site_name: 蟒营™时间管理(0TM)原型班
+copyright: 蟒营™101camp
+
+theme:
+    name: null
+    custom_dir: mkdocs_alabaster
+
+nav:
+  - Home: index.md
+  - License: license.md
+  - theme: alabaster/index.md
+#    '说明': alabaster/readme.md
+#    '使用': alabaster/guide.md
+#    '定制': alabaster/dev.md
+
+#  - DM: DM/_index.md
+#  - NC: NC/_index.md
+#  - SS: SS/_index.md
+#  - TS: TS/_index.md
+
+markdown_extensions:
+  - toc:
+      permalink: "¶"
+
+extra:
+  logo: logo-lazy-monkey-h420.png
+  include_toc: yes
+  extra_nav_links:
+    edit➔GitHub: https://github.com/101camp/blog
