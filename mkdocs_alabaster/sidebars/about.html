@@ -1,7 +1,10 @@
 {% if theme.logo %}
   <p class="logo">
     <a href="{{nav.homepage.url|url}}">
+      <!--
       <img class="logo" src="{{base_url}}/{{theme.logo}}" title="{{theme.logo_title}}">
+    -->
+      <img class="logo" src="{{extra.logo}}" title="{{extra.logo_title}}">
     </a>
   </p>
   {% if theme.logo_name %}

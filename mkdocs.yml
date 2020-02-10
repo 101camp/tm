@@ -24,6 +24,7 @@ markdown_extensions:
 
 extra:
   logo: https://blog.101.camp/logo-lazy-monkey-h420.png
+  logo_title: lazy-monkey
   include_toc: yes
   extra_nav_links:
     edit➔GitHub: https://github.com/101camp/tm
