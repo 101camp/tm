@@ -23,7 +23,7 @@ markdown_extensions:
       permalink: "¶"
 
 extra:
-  logo: logo-lazy-monkey-h420.png
+  logo: https://blog.101.camp/logo-lazy-monkey-h420.png
   include_toc: yes
   extra_nav_links:
-    edit➔GitHub: https://github.com/101camp/blog
+    edit➔GitHub: https://github.com/101camp/tm
