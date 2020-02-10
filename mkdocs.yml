@@ -4,8 +4,6 @@ copyright: 蟒营™101camp
 theme:
   name: null
   custom_dir: mkdocs_alabaster
-  logo: https://blog.101.camp/logo-lazy-monkey-h420.png
-  logo_title: lazy-monkey
 
 nav:
   - Home: index.md
@@ -36,6 +34,8 @@ intra:
 
 
 extra:
+  logo: "https://blog.101.camp/logo-lazy-monkey-h420.png"
+  logo_title: lazy-monkey
   include_toc: yes
   extra_nav_links:
     edit➔GitHub: https://github.com/101camp/tm
