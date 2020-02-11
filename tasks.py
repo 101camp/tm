@@ -2,7 +2,7 @@
 '''inv matter for auto pub. 101.camp
 '''
 
-__version__ = 'tm101CAMP v.200210.1942'
+__version__ = 'tm101CAMP v.200211.1742'
 __author__ = 'Zoom.Quiet'
 __license__ = 'CC-by-nc-nd@2019-09'
 
@@ -62,6 +62,7 @@ from textwrap import dedent as dedentxt
 CAMPROOT = os.environ.get("CAMP_TM")
 CSITES = {'tm':{'ori':'tm'
                 , 'ghp':'tm_ghp'
+                , 'dlog':'dlog_tm101camp'                
                 }
         }
 
@@ -141,7 +142,7 @@ def pu(c):
     #c.run('git add .', hide=False, warn=True)
     #c.run('git ci -am '
     c.run('git imp '
-          '"inv(loc) MkDocs upgraded by DAMA (at %s)"'% _ts
+          '"inv(loc) MkDocs upgraded by DAMA (at %s) from ztop"'% _ts
                     , hide=False, warn=True)
     #c.run('git pu', hide=False, warn=True)
 
@@ -170,7 +171,7 @@ def gh(c, site):
     #c.run('git add .', hide=False, warn=True)
     #c.run('git ci -am '
     c.run('git imp '
-          '"pub(site) gen. by MkDocs as invoke (at %s)"'% _ts
+          '"pub(site) gen. by MkDocs as invoke (at %s) from ztop"'% _ts
                     , hide=False, warn=True)
     #c.run('git pu', hide=False, warn=True)
 
@@ -233,7 +234,7 @@ def _injector(aim, drug):
             _replace = 0
             _exp += "\n"+drug
             print(drug)
-            _exp += '\n\n(auto index injected at %s) \n\n'% _TS
+            _exp += '\n\n(auto index injected by %s) \n\n'% __version__
             _exp += l 
             print('end inject')
         else:
