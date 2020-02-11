@@ -18,37 +18,34 @@ MONTH=`date +"%m"`
 #NOW=`date +"%y%m%d_%H%M%S"`
 TODAY=`date +"%y%m%d"`
 
-AIMP=/opt/log/cron
-#LOGF=$AIMP/$YEAR-$MONTH-YAtrigger.log
+export CAMP_TM=/opt/www/101camp/TM
+
+AIMP=$CAMP_TM/dlog_tm101camp
 LOGP=$AIMP/$YEAR/$MONTH
 LOGF=$LOGP/$TODAY-tm.log
 #=========================================================== action defines
-echo $LOGP
-echo $LOGF
+#echo $LOGP
+#echo $LOGF
 mkdir -p $LOGP
 
-#=========================================================== action defines
-export CAMP_TM=/opt/www/101camp/TM
-#echo $LOGF      #>> $LOGF 2>&1
-#mkdir -p $LOGP  #>> $LOGF 2>&1
-#env | grep YAZI
-#source $ACTIVATE
 source $ACTI
 
-$PYENV version
+#$PYENV version
 #$PIP list
 cd $CAMP_TM/tm
-ls .
+#ls .
 
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"         >> $LOGF
 echo "###::$VER Hooks log 4 auto deploy tm.101.camp"     >> $LOGF
 echo "###::run@" `date +"%Y/%m/%d %H:%M:%S"`                    >> $LOGF
 
 
-inv -l
-inv pub tm
+#inv -l              >> $LOGF 2>&1
+inv pub tm          >> $LOGF 2>&1
 
-
+cd $AIMP
+NOW=`date +"%y%m%d %H"%M"%S"`
+git upd "$VER try deploy at $NOW"
 
 #echo "###::end@" `date +"%Y/%m/%d %H:%M:%S"` 
 echo "###::end@" `date +"%Y/%m/%d %H:%M:%S"` >>                 $LOGF
