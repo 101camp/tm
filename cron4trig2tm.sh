@@ -15,12 +15,13 @@ ACTI=$PBIN/activate
 #=========================================================== path defines
 YEAR=`date +"%Y"`
 MONTH=`date +"%m"`
-NOW=`date +"%y%m%d_%H%M%S"`
+#NOW=`date +"%y%m%d_%H%M%S"`
+TODAY=`date +"%y%m%d"`
 
 AIMP=/opt/log/cron
 #LOGF=$AIMP/$YEAR-$MONTH-YAtrigger.log
 LOGP=$AIMP/$YEAR/$MONTH
-LOGF=$LOGP/$NOW-tm.log
+LOGF=$LOGP/$TODAY-tm.log
 #=========================================================== action defines
 echo $LOGP
 echo $LOGF
