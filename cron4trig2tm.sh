@@ -3,7 +3,7 @@ export CAMPSITES_ROOT="/opt/www/101camp"
 #echo $DU19SRC_ROOT
 #source /home/du19/.bashrc
 #=========================================================== var defines
-VER="cron4trig2tm.sh v.200211.1742"
+VER="cron4trig2tm.sh v.200211.1942"
 DATE=`date "+%y%m%d"`
 #NOW=$(date +"%Y-%m-%d")
 PYENV=$( which pyenv)
@@ -19,7 +19,7 @@ NOW=`date +"%y%m%d_%H%M%S"`
 
 AIMP=/opt/log/cron
 #LOGF=$AIMP/$YEAR-$MONTH-YAtrigger.log
-LOGP=$COMM/$YEAR/$MONTH
+LOGP=$AIMP/$YEAR/$MONTH
 LOGF=$LOGP/$NOW-tm.log
 #=========================================================== action defines
 echo $LOGP
