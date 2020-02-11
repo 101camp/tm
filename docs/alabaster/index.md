@@ -6,11 +6,11 @@
 
 ::.
 
-- [ Developer guide](dev.md)
 - [ User guide](guide.md)
 - [ Alabaster for MkDocs](readme.md)
+- [ Developer guide](dev.md)
 
-(auto index injected at 200210 2127 18.422) 
+(auto index injected by tm101CAMP v.200211.1742) 
 
 .::
 
