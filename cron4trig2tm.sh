@@ -46,6 +46,7 @@ echo "###::run@" `date +"%Y/%m/%d %H:%M:%S"`                    >> $LOGF
 
 
 inv -l
+inv pub tm
 
 
 
