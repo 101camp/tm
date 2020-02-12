@@ -108,15 +108,17 @@ def pl(c, site):
     if site:
         #pp(CSITES[site])
         
-        _aim = '%s/%s'%(CAMPROOT, CSITES[site]['gl'])
+        _aim = '%s/%s'%(CAMPROOT, CSITES[site]['ori'])
         cd(c, _aim)
-        #os.chdir(_aim)
         #c.run('pwd')
         c.run('git pull', hide=False, warn=True)
+
         _aim = '%s/%s'%(CAMPROOT, CSITES[site]['ghp'])
         cd(c, _aim)
-        #os.chdir(_aim)
-        #c.run('pwd')
+        c.run('git pull', hide=False, warn=True)
+
+        _aim = '%s/%s'%(CAMPROOT, CSITES[site]['dlog'])
+        cd(c, _aim)
         c.run('git pull', hide=False, warn=True)
     else:
         ver(c)
