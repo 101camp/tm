@@ -2,7 +2,7 @@
 '''inv matter for auto pub. 101.camp
 '''
 
-__version__ = 'tm101CAMP v.200211.1742'
+__version__ = 'tm101CAMP v.200212.2142'
 __author__ = 'Zoom.Quiet'
 __license__ = 'CC-by-nc-nd@2019-09'
 
@@ -343,7 +343,7 @@ def pub(c, site):
     global CAMPROOT
     global CSITES
     print(CAMPROOT)
-    #pl(c, site)
+    pl(c, site)
     _crt = '%s/%s'%(CAMPROOT, CSITES[site]['ori'])
     cd(c, _crt)
     chktri(c)
