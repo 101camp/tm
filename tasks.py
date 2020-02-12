@@ -85,7 +85,7 @@ def cd(c, path2):
     print('\n\t crt. PATH ===')
     c.run('pwd')
 
-#@task 
+@task 
 def ccname(c):
     c.run('cp CNAME %s/'% AIM, hide=False, warn=True)
     c.run('ls %s/'% AIM, hide=False, warn=True)
@@ -357,7 +357,7 @@ def pub(c, site):
         recover(c)
 
         pu(c)
-        #ccname(c)
+        ccname(c)
         #sync4media(c)
         gh(c, site)
         ver(c)
