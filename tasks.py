@@ -173,7 +173,7 @@ def gh(c, site):
     #c.run('git add .', hide=False, warn=True)
     #c.run('git ci -am '
     c.run('git imp '
-          '"pub(site) gen. by MkDocs as invoke (at %s) from ztop"'% _ts
+          '"pub(%s) gen. by MkDocs as invoke (at %s) from ztop"'%(site, _ts)
                     , hide=False, warn=True)
     #c.run('git pu', hide=False, warn=True)
 
@@ -209,7 +209,7 @@ def recover(c):
     c.run('ls -Aogh %s'% _path)
 
     c.run('git st')
-    c.run('git fix "(pubDUW) recover trigger obj. wait NEXT deploy"')
+    c.run('git fix "(tm.101.camp) recover trigger obj. wait NEXT deploy"')
 
     TRIGGER = 0
     print('TRIGGER obj. recover -> waiting human deploy again')
@@ -351,7 +351,7 @@ def pub(c, site):
     chktri(c)
     
     if TRIGGER:
-        print('auto deplo NOW:')
+        print('auto publish NOW:')
         #return None
         bu(c, site)
         recover(c)
