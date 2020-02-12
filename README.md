@@ -23,7 +23,14 @@
 ## Process
 > 那么, 这个网站应该是集体维护的, 怎么来呢?
 
-当然依托 GitHub 生态了
+当然依托 GitHub 生态了:
+
+- 免费托管, 开源仓库
+- [utterances](https://utteranc.es/) 寄生评注
+- 定制域名
+- 远程触发
+- 编译日志复审
+- ...
 
 ### MkDocs
 > 因为是 Pythonic 社区,所以, 首先在 Python 生态中选择
@@ -39,11 +46,63 @@
 ### Deploy
 > 必须能自动化触发部署呢...
 
+所以,当前:
 
 
+    local ++ _trigger/deploy.md
+        +-> 101camp/tm
+        |       .
+        |       .
+        |       |
+        | [ztop@aliyub]
+        |   +- crontab (15')
+        |       +- tm
+        |           +- inv pub tm
+        |               +- _trigger/deploy.md
+     branch                <iff exsit>
+    gh-pages                    +- mkdoc build
+        |                         / |
+        +--- <<- ----- tm_ghp <<-+  | (deploy logging)
+          + <<- -  <<-+
+          |    dlog_tm101camp
+        branch 
+      dlog_tm101camp
+          |
+          +-> 101camp/comments
+
+
+在有关主机中部署为:
+
+- 目录 tm 克隆自 [101camp/tm](https://github.com/101camp/tm) 
+- 目录 tm_ghp 切换自[101camp/tm at gh\-pages](https://github.com/101camp/tm/tree/gh-pages) 
+    + 并将 tm_ghp 用 `ln -s` 软链接形式, 链接到 `tm/site`
+    + 作为 MkDocs 编译目标目录
+- 目录 dlog_tm101camp 使用 orphan 分支克隆法, 单独 clone [101camp/comments at dlog\_tm101camp](https://github.com/101camp/comments/tree/dlog_tm101camp) 
+    + 作为编译事务日志容器
+- [cron4trig2tm\.sh](https://github.com/101camp/tm/blob/master/cron4trig2tm.sh) 作为主机定期任务
+    + 每 15 分钟自动运行一行
+    + 调用 `inv pub tm` 指令
+    + 这是由 [tasks\.py](https://github.com/101camp/tm/blob/master/tasks.py) 提供的
+    + 将自动化完成一系列行为, 主要包含:
+        * 同步所有仓库
+        * 检验是否有 `_trigger/deploy.md` 触发文件
+        * 如果有,则使用 `mkdoc build` 指令编译最新版本网站
+        * 然后, 进入 `tm_ghp` 目录将生成的静态网站 push 给 github 完成最后的发布
+- 同时, [cron4trig2tm\.sh](https://github.com/101camp/tm/blob/master/cron4trig2tm.sh) 收集自动发布过程中的所有系统输出
+    + 写入 `dlog_tm101camp` 对应目录的 .log 文件
+    + 并 push 给 github
+    + 这样, 即便我们不在电脑前, 无法远程登陆主机
+    + 也可以观察到对应发布行为过程是否有问题
 
 
 ### Local
+> 而所有联合运营成员, 想更新 tm.101.camp 网站内容就非常简洁了
+
+- 克隆 [101camp/tm](https://github.com/101camp/tm) 
+- 对 `docs/` 中的 .md 文件进行自然的编写/创建/删除/...
+- 然后, `touch _trigger/deploy.md`, 创建一个空白文件(deploy.md)到约定目录中
+- 提交变更
+- 一般等待10分钟左右, 就将完成自动部署.
 
 
 ## refer.
