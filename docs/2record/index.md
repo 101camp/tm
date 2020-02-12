@@ -10,7 +10,7 @@
 - [ 2017-04-21 大妈聊时间账单 录音纪要 分享](170421-dama-tm-podcast.md)
 - [ 2020-01-02  4w[DUr1912]0TM 服务体验](200102-du-zq-issue.md)
 
-(auto index injected by tm101CAMP v.200211.1742) 
+(auto index injected by tm101CAMP v.200212.2142) 
 
 .::
 

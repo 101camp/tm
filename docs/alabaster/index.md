@@ -10,7 +10,7 @@
 - [ Alabaster for MkDocs](readme.md)
 - [ Developer guide](dev.md)
 
-(auto index injected by tm101CAMP v.200211.1742) 
+(auto index injected by tm101CAMP v.200212.2142) 
 
 .::
 
