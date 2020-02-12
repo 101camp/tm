@@ -45,7 +45,7 @@ inv pub tm          >> $LOGF 2>&1
 
 cd $AIMP
 NOW=`date +"%y%m%d %H"%M"%S"`
-git upd "$VER try deploy at $NOW"
+git upd "$VER try deploy tm.101.camp /at $NOW"
 
 #echo "###::end@" `date +"%Y/%m/%d %H:%M:%S"` 
 echo "###::end@" `date +"%Y/%m/%d %H:%M:%S"` >>                 $LOGF
