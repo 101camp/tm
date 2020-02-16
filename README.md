@@ -54,12 +54,12 @@
         |       .
         |       .
         |       |
-        | [ztop@aliyub]
+        | [ztop@aliyun]
         |   +- crontab (15')
         |       +- tm
         |           +- inv pub tm
         |               +- _trigger/deploy.md
-     branch                <iff exsit>
+     branch                <if exsit>
     gh-pages                    +- mkdoc build
         |                         / |
         +--- <<- ----- tm_ghp <<-+  | (deploy logging)
