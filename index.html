@@ -1,58 +1,557 @@
 
-<!DOCTYPE html>
-<html>
-<head>
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>蟒营™时间管理(0TM)原型班</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
   
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-    <title>Home &mdash; 蟒营™时间管理(0TM)原型班</title>
-
-    <link rel="shortcut icon" href="./img/favicon.ico">
-    <link rel="stylesheet" href="./css/alabaster.css" type="text/css">
-    <link rel="stylesheet" href="./css/alabaster-overrides.css" type="text/css">
-
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-
+      <a href="#tm" tabindex="0" class="md-skip">
+        跳转至
+      </a>
     
-      <script src="search/main.js"></script>
     
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="." title="蟒营™时间管理(0TM)原型班" aria-label="蟒营™时间管理(0TM)原型班" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              蟒营™时间管理(0TM)原型班
+            </span>
+            <span class="md-header-nav__topic">
+              
+                首页
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
 
+
+  
+
+<a href="https://github.com/101camp/tm/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    101camp/tm
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
     
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="." title="蟒营™时间管理(0TM)原型班" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    蟒营™时间管理(0TM)原型班
+  </label>
+  
+    <div class="md-nav__source">
+      
 
-    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
+  
+
+<a href="https://github.com/101camp/tm/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    101camp/tm
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
     
+      
+      
+      
+
   
 
 
-<!--
-190916 ++tongji.baidu
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?7b96768fb6a5e86ac53eae70bb5fd60b";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        首页
+      </label>
+    
+    <a href="." title="首页" class="md-nav__link md-nav__link--active">
+      首页
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    栏目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    背景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    目的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    更新
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    准备
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
 
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="/1overview/" title="概览" class="md-nav__link">
+      概览
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="/2record/" title="进展" class="md-nav__link">
+      进展
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="/3work/" title="成果" class="md-nav__link">
+      成果
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="/4experience/" title="经验" class="md-nav__link">
+      经验
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      关于
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        关于
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="poweredby/" title="Powered by" class="md-nav__link">
+      Powered by
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                    <!--zoejane 200206 remove columns in sidebar
+<h2>Columns</h2>
+<ul>
+    <li><a href="/1overview/">概览</a></li>
+    <li><a href="/2record/">进展</a></li>
+    <li><a href="/3work/">成果</a></li>
+    <li><a href="/4experience/">经验</a></li>
+</ul>
 -->
 
+<img src="https://zoejane.oss-cn-beijing.aliyuncs.com/img/cat_h120.svg" title="lazy-cat">
 
-</head>
-<body>
 
-  <div class="document">
-    <div class="documentwrapper">
-      <div class="bodywrapper">
-        <div class="body" role="main">
+
+<h2>Powered by</h2>
+<ul class="powerby__list">
+
+    <li>
+        <a href="https://101.camp/">蟒营™</a>
+    <ul class="powerby__list">
+        <li>
+            <a href="https://py.101.camp/">Python 入门班</a>
+        </li>
+        <li>
+            <a href="https://io.101.camp/">图谱</a>
+        </li>
+        <li>
+            <a href="https://slides.101.camp/">幻灯</a>
+        </li>
+        <li>
+            <a href="https://wiki.101.camp/">维基</a>
+        </li>
+        <li>
+            <a href="https://github.com/101camp/comments/issues">评注</a>
+        </li>
+    </ul>
+    </li>
+
+    <li>
+        <a href="https://du.101.camp/">自怼圈</a>
+    </li>
+
+    <li>
+        <a href="http://weekly.pychina.org/">蟒周刊</a>
+    </li>
+
+    <li>
+        <a href="https://blog.zhgdg.org/">珠海GDG</a>
+    </li>
+
+    <li>"大妈"们
+        <ul class="powerby__list">
+        <li>
+            <a href="https://yixuan.li/">Yixuan</a>
+        </li>
+
+        <li>
+            <a href="https://www.douban.com/people/Azeril/">Azeril</a>
+        </li>
+        <li>
+            <a href="https://zoomquiet.io/">Zoom.Quiet</a>
+        </li>
+        <li>
+            <a href="https://blog.zoejane.net/">Zoe Jane</a>
+        </li>
+        <li>
+            ...
+        </li>
+        </ul>
+
+    <li>
+        <a href="http://mainium.icu">昧因科技®</a>
+    </li>
+
+    <li>
+        <a href="https://www.vultr.com/?ref=8333895">vultr</a>
+    </li>    
+</ul>
+
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    栏目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    背景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    目的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    更新
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    准备
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
-            <h1 id="tm">TM 时间账单服务<a class="headerlink" href="#tm" title="Permanent link">¶</a></h1>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/101camp/tm/edit/master/docs/index.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="tm">TM 时间账单服务</h1>
+<p><img alt="" src="http://zoejane.oss-cn-beijing.aliyuncs.com/img/2020-02-12-134707.png" /></p>
+<h2 id="_1"><strong>栏目</strong></h2>
+<ul>
+<li><strong><a href="1overview/">概览</a></strong> ~ 课程以及服务规划...</li>
+<li><strong><a href="2record/">进展</a></strong> ~ 时帐数据样本以及进展</li>
+<li><strong><a href="3work/">成果</a></strong> ~ 阶段分析小结</li>
+<li><strong><a href="4experience/">经验</a></strong> ~ 习惯/效果/运营/..各种故事</li>
+</ul>
+<hr />
+<h2 id="_2"><strong>背景</strong></h2>
 <ul>
 <li>最早的时帐任务:<ul>
-<li><a href="https://github.com/DebugUself/du4proto/issues/2">28d[TASK]时间账单任务 (原 S01E01 任务 -&gt; S01E01.2)</a></li>
+<li><a href="https://github.com/DebugUself/du4proto/issues/2">[TASK] 时间账单任务</a></li>
 <li><a href="https://github.com/DebugUself/du4proto/issues/3">[ASK] 有靠谱的时间记录工具否?</a></li>
 </ul>
 </li>
@@ -60,7 +559,7 @@ var _hmt = _hmt || [];
 <li>进而形成共同的工具以及规约</li>
 <li>没想到太过艰难, 无人坚持</li>
 </ul>
-<h2 id="_2">目的<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h2 id="_3"><strong>目的</strong></h2>
 <p>通过100天时帐记录和3次分析反馈</p>
 <ul>
 <li>建立私人时帐习惯</li>
@@ -71,7 +570,8 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<h2 id="_3">更新<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<hr />
+<h2 id="_4"><strong>更新</strong></h2>
 <p>::.</p>
 <ul>
 <li><a href="2record/200210-zoe-site/"> 2020-02-10 TM 时间账单服务小站 上线</a></li>
@@ -86,20 +586,22 @@ var _hmt = _hmt || [];
 </ul>
 <p>(auto index injected by tm101CAMP v.200212.2142) </p>
 <p>.::</p>
-<h2 id="_4">栏目<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<p><strong>方案</strong></p>
+<p>定期收集数据</p>
 <ul>
-<li><a href="1overview/">综述</a> ~ 课程以及服务规划...</li>
-<li><a href="2record/">数据</a> ~ 时帐数据样本以及进展</li>
-<li><a href="3work/">成果</a> ~ 阶段分析小结</li>
-<li><a href="4experience/">经验</a> ~ 习惯/效果/运营/..各种故事</li>
+<li>200201 首月数据 .csv</li>
+<li>200301 次月数据 .csv</li>
+<li>200401 末月数据 .csv</li>
 </ul>
-<h2 id="_5">准备工作<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
-<h3 id="_6">征召志愿者<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
-<p>5位: @zoejane/ @bemself/ @linfeng365/ @mxclover/ @orderchaos3000 </p>
-<h3 id="_7">创建专用列表<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
-<p>101camp0tm@googlegroups.com</p>
-<h3 id="_8">形成可用习惯<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
-<p>统一配置</p>
+<p>内部公开分析</p>
+<ul>
+<li>200208 直播分析</li>
+<li>200308 直播分析</li>
+<li>200408 直播分析</li>
+</ul>
+<hr />
+<h2 id="_5"><strong>准备</strong></h2>
+<p><strong>统一配置</strong></p>
 <ul>
 <li>安装 aTimeLogger </li>
 <li>最简 action:<ul>
@@ -124,64 +626,25 @@ var _hmt = _hmt || [];
 </li>
 <li>报告配置:</li>
 </ul>
-<p><img alt="" src="https://user-images.githubusercontent.com/22494/71803163-fb73f980-309a-11ea-981c-5d602d734d9b.jpeg" /></p>
-<p><img alt="" src="https://user-images.githubusercontent.com/22494/71803191-0f1f6000-309b-11ea-8094-cff400fc39e8.jpeg" /></p>
-<h2 id="_9">校调记录习惯<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
-<p>参考操作视频-&gt;<a href="http://101.zoomquiet.top/res/0tm/index.html">Index of /res/0tm {gen. by gen4idx.py v13.4.18 from Zoom.Quiet}</a></p>
-<h2 id="_10">检验记录数据<a class="headerlink" href="#_10" title="Permanent link">¶</a></h2>
-<p>通过邮件列表  101camp0tm@googlegroups.com 进行</p>
-<h2 id="_11">方案<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
-<h3 id="_12">定期收集数据<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<p><img alt="" src="http://zoejane.oss-cn-beijing.aliyuncs.com/img/2020-02-10-060919.jpg" /></p>
+<p><img alt="" src="http://zoejane.oss-cn-beijing.aliyuncs.com/img/2020-02-12-142815.jpg" /></p>
+<p><strong>校调记录习惯</strong></p>
 <ul>
-<li>[ ] 200201 首月数据 .csv</li>
-<li>[ ] 200301 次月数据 .csv</li>
-<li>[ ] 200401 末月数据 .csv</li>
+<li>参考操作视频 -&gt; <a href="http://101.zoomquiet.top/res/0tm/index.html">Index of /res/0tm {gen. by gen4idx.py v13.4.18 from Zoom.Quiet}</a></li>
 </ul>
-<h3 id="_13">内部公开分析<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<p><strong>检验记录数</strong></p>
 <ul>
-<li>[ ] 200208 直播分析</li>
-<li>[ ] 200308 直播分析</li>
-<li>[ ] 200408 直播分析</li>
+<li>通过邮件列表  101camp0tm@googlegroups.com 进行</li>
 </ul>
-<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h2>
+<hr />
+<p><strong>Changelog</strong></p>
 <ul>
+<li>20200212 zoejane rebuild the structure</li>
 <li>20200206 zoejane merge issues</li>
 <li>20191228 ZQ init.</li>
 </ul>
-            
-<!--
-            
-              <h3>Navigation</h3>
-
-
-<ul>
-  
-      
-        <li>
-          <a href="">Home</a>
-        </li>
-      
-    
-      
-        <li>
-          <a href="license/">License</a>
-        </li>
-      
-    
-      
-        <li>
-          <a href="alabaster/">theme</a>
-        </li>
-      
-    
-  </ul>
-            
-
--->
-
-            <!--190910 init. comments-->
-<hr/>
-            <script src="https://utteranc.es/client.js"
+                <!--zoejane 200224 - DAMA 190910 init. comments-->
+                <script src="https://utteranc.es/client.js"
         repo="101camp/comments"
         issue-term="url"
         label="✨💬✨ "
@@ -190,9 +653,7 @@ var _hmt = _hmt || [];
         async>
 </script>
 
-<hr/>
-
-            <hr/>
+                <hr/>
 
 <h3>精品小班5Py 初十上线</h3>
 <blockquote><p>
@@ -276,165 +737,87 @@ var _hmt = _hmt || [];
 
 
 
+                
+                  
+                
+                
+              
+              
+                
 
-          
+
+              
+            </article>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-      <div class="sphinxsidebarwrapper">
+      </main>
+      
         
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="poweredby/" title="Powered by" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                Powered by
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            蟒营™101camp
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.df00da5d.js"></script>
+      
+        
+        
+          
+          <script src="assets/javascripts/lunr/lunr.stemmer.support.js"></script>
           
             
-  <p class="logo">
-    <a href=".">
-      <!--
-      <img class="logo" src="./https://blog.101.camp/logo-lazy-monkey-h420.png" title="lazy-monkey">
-    -->
-      <img class="logo" src="https://blog.101.camp/logo-lazy-monkey-h420.png" title="lazy-monkey">
-    </a>
-  </p>
-  
-
-
-
+              
+                <script src="assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
           
-            <!--
-<div id="searchbox" style="display: none;" role="search">
-  <h3>Quick search</h3>
-  <form class="search" action="./search.html" method="get">
-    <input name="q" type="text">
-    <input value="Go" type="submit">
-  </form>
-  <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-  </p>
-</div>
-<script type="text/javascript">
-  document.getElementById("searchbox").style.display = "block";
-</script>
-
--->
           
         
-
-        <!--190910 init. comments-->
-        <h3>Columns</h3>
-<ul>
-    <li><a href="/1overview/">
-                 综述</a></li>
-    <li><a href="/2record/">
-                 数据</a></li>
-    <li><a href="/3work/">
-                 成果</a></li>
-    <li><a href="/4experience/">
-                 经验</a></li>
-
-</ul>
-
-
-  <h3>Navigation</h3>
-
-
-<ul>
-  
       
-        <li>
-          <a href="">Home</a>
-        </li>
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
       
     
-      
-        <li>
-          <a href="license/">License</a>
-        </li>
-      
-    
-      
-        <li>
-          <a href="alabaster/">theme</a>
-        </li>
-      
-    
-  </ul>
-
-
-<h4>Powered by</h4>
-<ul>
-    <li>
-        <a href="https://101.camp/">蟒营™</a>
-<ul>
-    <li>
-        <a href="https://py.101.camp/">Python 入门班</a>
-    </li>
-    <li>
-        <a href="https://io.101.camp/">图谱</a>
-    </li>
-    <li>
-        <a href="https://slides.101.camp/">幻灯</a>
-    </li>
-    <li>
-        <a href="https://wiki.101.camp/">维基</a>
-    </li>
-    <li>
-        <a href="https://github.com/101camp/comments/issues">评注</a>
-    </li>
-</ul>
-    </li>
-
-    <li>
-        <a href="https://du.101.camp/">自怼圈</a>
-    </li>
-    <li>
-        <a href="http://weekly.pychina.org/">蟒周刊</a>
-    </li>
-    <li>
-        <a href="https://blog.zhgdg.org/">珠海GDG</a>
-    </li>
-    <li>
-        "大妈"们
-<ul>
-    <li>
-        <a href="https://yixuan.li/">Yixuan</a>
-    </li>
-
-    <li>
-        <a href="https://www.douban.com/people/Azeril/">Azeril</a>
-    </li>
-    <li>
-        <a href="https://zoomquiet.io/">Zoom.Quiet</a>
-    </li>
-    <li>
-        ...
-    </li>
-</ul>
-    <li>
-        <a href="http://mainium.icu">昧因科技®</a>
-    </li>
-    </li>
-</ul>
-
-      </div>
-    </div>
-    <div class="clearer"></div>
-  </div>
-
-  
-    <div class="footer">
-      
-        &copy; 蟒营™101camp
-      
-      
-        |
-        Powered by <a href="http://www.mkdocs.org">mkdocs 1.0.4</a>
-        &amp; <a href="https://github.com/iamale/mkdocs-alabaster">mkdocs-alabaster</a>
-      
-    </div>
-  
-
-  <!--
-  MkDocs version      : 1.0.4
-  Docs Build Date UTC : 2020-02-12 13:36:47
-  -->
-</body>
+  </body>
 </html>
