@@ -1,41 +1,40 @@
+# Project information
 site_name: 蟒营™时间管理(0TM)原型班
 copyright: 蟒营™101camp
 
+# Repository
+repo_name: 101camp/tm
+repo_url: https://github.com/101camp/tm
+# edit_uri: ""
+
+# Configuration
 theme:
-  name: null
-  custom_dir: mkdocs_alabaster
+#  name: null
+#  custom_dir: mkdocs_alabaster
+  name: material
+  custom_dir: custom_material
 
+  language: zh
+  feature:
+    # tabs: true
+  #palette:
+  #  primary: indigo
+  #  accent: indigo
+
+# Plugins
+plugins:
+  - search
+
+# Page tree
 nav:
-  - Home: index.md
-  - License: license.md
-  - theme: alabaster/index.md
-#    '说明': alabaster/readme.md
-#    '使用': alabaster/guide.md
-#    '定制': alabaster/dev.md
+  - 首页: index.md
+  - 概览: /1overview/
+  - 进展: /2record/
+  - 成果: /3work/
+  - 经验: /4experience/
+  - 关于:
+    - Powered by: poweredby.md 
+    - License: license.md
 
-#  - DM: DM/_index.md
-#  - NC: NC/_index.md
-#  - SS: SS/_index.md
-#  - TS: TS/_index.md
-
-markdown_extensions:
-  - toc:
-      permalink: "¶"
-
-intra:
-  col0_title: 综述
-  col0_link2: /1overview/
-  col1_title: 数据
-  col1_link2: /2record/
-  col2_title: 成果
-  col2_link2: /3work/
-  col3_title: 经验
-  col3_link2: /4experience/
-
-
-extra:
-  logo: "https://blog.101.camp/logo-lazy-monkey-h420.png"
-  logo_title: lazy-monkey
-  include_toc: yes
-  extra_nav_links:
-    edit➔GitHub: https://github.com/101camp/tm
+extra_css:
+  - 'stylesheets/extra.css'
