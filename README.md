@@ -125,7 +125,7 @@
 > 2: …  
 > 所以, 你懂的…  
 
-### Local
+### Usage
 > 而所有联合运营成员, 想更新 tm.101.camp 网站内容就非常简洁了
 
 - 克隆 [101camp/tm](https://github.com/101camp/tm) 
@@ -135,6 +135,79 @@
 - 一般等待10分钟左右, 就将完成自动部署.
 
 
+## Debug:
+> 然而, 想真正整个流程可以在本地跑起来, 还是有点儿配置的...
+
+### env. 
+> 部署和主机端一致的目录树
+
+从一个合适的真正的空白目录开始:
+
+    path/2/全新空白目录:
+        +- tm_ghp/ ~ 发布分支, 配合 github-pages 系统
+        |       clone 自 github.com:101camp/tm    
+        |           并切换到 gh-pages 分支
+        |       
+        +- tm/ ~ 主分支, 撰写
+        |       clone 自 github.com:101camp/tm    
+        |               然后, ln -s ../tm_ghp/ site
+        |       
+        `- dlog_tm101camp/
+                用 orphan 分支独立 clone 的方法复制 commits 仓库的专用分支
+                $ mkdir dlog_tm101camp
+                $ cd dlog_tm101camp/
+                $ git init .
+                $ git remote add -t dlog_tm101camp \
+                        f origin  git@github.com:101camp/comments.git
+                $ git co dlog_tm101camp
+                $ git br -a
+                * dlog_tm101camp
+                  remotes/origin/dlog_tm101camp
+
+
+然后, 将这个包含三个功能仓库的目录, 追加到系统环境中
+
+$ echo 'export CAMP_TM="path/2/全新空白目录"' >> ~/.bash_profile
+
+更新系统变量:
+
+$ source ~/.bash_profile
+
+应该可以检验到设置成功:
+
+    $ env | grep CAMP_TM
+    CAMP_TM="path/2/全新空白目录
+
+> 返回的目录就是三个功能仓库的根目录
+
+### inv
+先批量完成依赖模块的安装:
+
+    $ pip install -r requirements.txt
+
+然后, 进入 tm 目录就可以使用专用脚本来完成自动化批量发布处置了:
+
+> 检验所有指令
+
+    $  inv -l
+    Available tasks:
+
+      bu       usgae MkDocs build AIM site
+      ccname
+      pub      $ inv pub blog <- auto deploy new site version base multi-repo.
+      ver      echo crt. verions
+
+
+    $  inv -l
+    Available tasks:
+
+      bu       usgae MkDocs build AIM site
+      ccname
+      pub      $ inv pub blog <- auto deploy new site version base multi-repo.
+      ver      echo crt. verions
+
+
+
 ## refer.
 
 - [奇特的一生 (柳比歇夫坚持56年的“时间统计法”)](https://book.douban.com/subject/1115353/)
@@ -142,9 +215,11 @@
 - ...
 
 
-## logging:
 
 
+## logging
+
+- 200303 ZQ 增补 inv pub tm 使用说明
 - 202012 ZQ 增补说明
 - 202010 ZQ init.
 
