@@ -187,7 +187,7 @@ $ source ~/.bash_profile
 
 然后, 进入 tm 目录就可以使用专用脚本来完成自动化批量发布处置了:
 
-> 检验所有指令
+> 检验所有指令:
 
     $  inv -l
     Available tasks:
@@ -197,15 +197,12 @@ $ source ~/.bash_profile
       pub      $ inv pub blog <- auto deploy new site version base multi-repo.
       ver      echo crt. verions
 
+> 自动发布:
 
-    $  inv -l
-    Available tasks:
-
-      bu       usgae MkDocs build AIM site
-      ccname
-      pub      $ inv pub blog <- auto deploy new site version base multi-repo.
-      ver      echo crt. verions
-
+    $  git pub tm
+    [master ebc694c] 🛎 PUBLISH: tm
+     2 files changed, 81 insertions(+), 2 deletions(-)
+     create mode 100644 requirements.txt
 
 
 ## refer.
