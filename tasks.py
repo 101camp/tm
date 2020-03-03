@@ -177,7 +177,7 @@ def gh(c, site):
                     , hide=False, warn=True)
     #c.run('git pu', hide=False, warn=True)
 
-#@task
+@task
 def chktri(c):
     '''check trigger obj. set TRIGGER switch
     '''
@@ -339,7 +339,7 @@ def reidx(c, site):
 
 @task 
 def pub(c, site):
-    '''$ inv pub blog <- auto deploy new site version base multi-repo.
+    '''$ inv pub tm <- auto deploy new site version base multi-repo.
     '''
     global TRIGGER
     global CAMPROOT

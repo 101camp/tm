@@ -199,11 +199,11 @@ $ source ~/.bash_profile
 
 > 自动发布:
 
-    $  git pub tm
-    [master ebc694c] 🛎 PUBLISH: tm
-     2 files changed, 81 insertions(+), 2 deletions(-)
-     create mode 100644 requirements.txt
+    $  inv pub tm
+    /opt/data/Sites/101.camp/_running/TM
 
+         crt. PATH ===
+    /opt/data/Sites/101.camp/_running/TM/tm
 
 ## refer.
 
