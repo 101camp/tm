@@ -7,8 +7,8 @@
 ::.
 
 - [ Developer guide](dev.md)
-- [ User guide](guide.md)
 - [ Alabaster for MkDocs](readme.md)
+- [ User guide](guide.md)
 
 (auto index injected by tm101CAMP v.200212.2142) 
 

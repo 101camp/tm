@@ -37,13 +37,13 @@
 ::.
 
 - [ 2020-02-10 TM 时间账单服务小站 上线](2record/200210-zoe-site.md)
-- [ 问答汇总](1overview/200209-0tm-zoe-qa.md)
-- [ TM 时间账单服务](1overview/200209-0tm-zoe-readme.md)
 - [ 资源汇总](1overview/200209-0tm-zoe-resources.md)
+- [ TM 时间账单服务](1overview/200209-0tm-zoe-readme.md)
+- [ 问答汇总](1overview/200209-0tm-zoe-qa.md)
 - [ 2020-01-02  4w[DUr1912]0TM 服务体验](2record/200102-du-zq-issue.md)
 - [ 2020-01-02 [101camp0tm] 834 启用+校调记录行为](2record/200102-du-zq-mail.md)
-- [ 2019-12-28  [DUr1912]preTM 新怼福利, 老怼志愿体验](2record/191228-du-zq-issue.md)
 - [ zoejane's log](2record/191228-log-zoejane.md)
+- [ 2019-12-28  [DUr1912]preTM 新怼福利, 老怼志愿体验](2record/191228-du-zq-issue.md)
 - [ 2017-04-21 大妈聊时间账单 录音纪要 分享](2record/170421-dama-tm-podcast.md)
 
 (auto index injected by tm101CAMP v.200212.2142) 
